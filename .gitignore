@@ -1,0 +1,29 @@
+# Gradle
+.gradle/
+build/
+local.properties
+
+# Secrets вЂ” РЅРёРєРѕРіРґР° РЅРµ РєРѕРјРјРёС‚РёРј РєР»СЋС‡Рё
+keystore.properties
+keystore/
+*.jks
+*.keystore
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+captures/
+
+# Android
+*.apk
+*.aab
+*.ap_
+*.dex
+output.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Временные UI-дампы
+_ui_*.xml

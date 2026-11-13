@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DriverGuard</string>
+    <string name="channel_monitoring">Мониторинг водителя</string>
+    <string name="channel_alarm">Тревога</string>
+
+    <string name="notif_running_title">Мониторинг активен</string>
+    <string name="notif_running_text">Следим за глазами и положением головы</string>
+    <string name="notif_warn_title">Мягкое предупреждение</string>
+    <string name="notif_warn_text">Замечены зевок или прикрытые глаза</string>
+    <string name="notif_alarm_title">Тревога: водитель засыпает</string>
+    <string name="notif_alarm_text">Снизьте скорость и остановитесь</string>
+    <string name="notif_camera_error">Не удалось включить камеру</string>
+    <string name="action_stop_alarm">Остановить сигнал</string>
+    <string name="action_finish">Завершить</string>
+
+    <string name="status_searching">ПОИСК ЛИЦА</string>
+    <string name="status_eyes_closed">ГЛАЗА ЗАКРЫТЫ</string>
+    <string name="status_ok">ПОЕЗДКА ИДЁТ</string>
+
+    <string name="trip_finished_title">Поездка завершена</string>
+    <string name="trip_finished_summary">В пути %1$s. Тревог: %2$d.</string>
+    <string name="trip_finished_stats">Кивки: %1$d · Зевки: %2$d</string>
+    <string name="btn_new_trip">НОВАЯ ПОЕЗДКА</string>
+    <string name="btn_history">История и настройки</string>
+
+    <string name="toast_camera_required">Без доступа к камере приложение не сможет следить за усталостью.</string>
+    <string name="toast_later">Вы можете выдать доступ к камере в настройках Android.</string>
+    <string name="toast_camera_error">Камера недоступна: %1$s</string>
+
+    <string name="alarm_wake">Я ПРОСНУЛСЯ</string>
+    <string name="alarm_title">ПРОСНИСЬ</string>
+    <string name="alarm_reason_eyes">Глаза закрыты %1$s с</string>
+    <string name="alarm_reason_nod">Кивок головы: %1$s°</string>
+    <string name="alarm_reason_yawn">Сильная зевота</string>
+    <string name="alarm_reason_mixed">Сонливость и опущенная голова</string>
+
+    <string name="settings_title">Настройки</string>
+</resources>
