@@ -2,6 +2,9 @@
 
 Android-приложение, которое следит за лицом через фронтальную камеру и предупреждает водителя **до того, как он уснёт**.
 
+[![Скачать APK](https://img.shields.io/badge/скачать-APK%201.0.0-22D3EE?style=for-the-badge&logo=android&logoColor=white)](https://github.com/Ncuha01-cloud/DriverGuard/releases/latest/download/app-release.apk)
+[![Лицензия MIT](https://img.shields.io/badge/лицензия-MIT-22E3A0?style=for-the-badge)](LICENSE)
+
 > [!WARNING]
 > DriverGuard — вспомогательный инструмент, а не замена отдыху и внимательности. Он не управляет автомобилем, не заменяет автопилот и не гарантирует предотвращение ДТП. Все вычисления выполняются на устройстве, видео никуда не передаётся и не записывается.
 
@@ -73,7 +76,19 @@ MonitoringService (foreground, type=camera, PARTIAL_WAKE_LOCK)
 
 ## Установка
 
-### Вариант 1 — собрать из исходников
+### Вариант 1 — готовый APK (самый быстрый)
+
+Скачайте **`app-release.apk`** со страницы [последнего релиза](https://github.com/Ncuha01-cloud/DriverGuard/releases/latest) — подписанный, 37,8 МБ, `minSdk 26`.
+
+1. Рядом лежит `SHA256SUMS.txt`. По желанию сверьте сумму:
+   `certutil -hashfile app-release.apk SHA256` (Windows) или `sha256sum -c SHA256SUMS.txt` (Linux/macOS).
+2. Разрешите установку из этого источника и откройте файл.
+3. Нужен телефон на Android 8.0+ с фронтальной камерой.
+
+Прямая ссылка на файл:
+`https://github.com/Ncuha01-cloud/DriverGuard/releases/latest/download/app-release.apk`
+
+### Вариант 2 — собрать из исходников
 
 Требования: JDK 17, Android SDK 34, эмулятор или телефон с Android 8.0 (API 26) и выше и фронтальной камерой.
 
@@ -87,9 +102,7 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 Либо откройте папку в Android Studio и нажмите Run.
 
-### Вариант 2 — готовый APK
-
-Соберите релиз (`./gradlew assembleRelease`) или возьмите `app-debug.apk` из артефактов Android Studio. Для подписи релиза нужен `keystore.properties` (не входит в репозиторий):
+Для собственной подписи релиза (`./gradlew assembleRelease`) нужен `keystore.properties` (не входит в репозиторий):
 
 ```properties
 storeFile=keystore/release.jks

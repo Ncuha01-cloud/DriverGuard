@@ -18,6 +18,7 @@ SHOTS = os.path.join(PROJECT, "docs", "screenshots")
 OUT = os.path.join(os.path.dirname(PROJECT), "DriverGuard-presentation.pptx")
 
 REPO = "https://github.com/Ncuha01-cloud/DriverGuard"
+RELEASE = "https://github.com/Ncuha01-cloud/DriverGuard/releases/latest/download/app-release.apk"
 
 # --- палитра (совпадает с ресурсами приложения) ---
 BG = RGBColor(0x08, 0x0B, 0x12)
@@ -786,7 +787,7 @@ text(s, 0.75, 4.96, 6.3, 0.9,
      size=10.5, color=INK3, line_spacing=1.16)
 
 # большая ссылка
-card(s, 7.35, 1.28, 5.33, 3.48, fill=RGBColor(0x0D, 0x1B, 0x29),
+card(s, 7.35, 1.28, 5.33, 3.95, fill=RGBColor(0x0D, 0x1B, 0x29),
      stroke_=RGBColor(0x22, 0x4A, 0x5E))
 text(s, 7.62, 1.50, 4.8, 0.26, "РЕПОЗИТОРИЙ", size=9, color=ACCENT, bold=True,
      letter=1.6)
@@ -795,17 +796,28 @@ text(s, 7.62, 1.84, 4.85, 0.34, "github.com/Ncuha01-cloud/DriverGuard",
 text(s, 7.62, 2.28, 4.85, 0.34,
      [[("Открыть на GitHub  →", {"color": ACCENT, "bold": True,
                                  "link": REPO})]], size=12)
-text(s, 7.62, 2.94, 4.85, 1.0,
+text(s, 7.62, 2.94, 4.85, 0.82,
      "Лицензия MIT · Kotlin · Android · ML Kit. Та же ссылка размещена "
      "в README и описании репозитория.", size=10, color=INK2,
      line_spacing=1.16)
+
+# --- блок «скачать APK» ---
+rect(s, 7.62, 3.84, 4.85, 0.014, fill=STROKE)
+text(s, 7.62, 4.00, 4.8, 0.24, "ГОТОВЫЙ APK", size=9, color=OK, bold=True,
+     letter=1.4)
+text(s, 7.62, 4.28, 4.85, 0.32,
+     [[("Скачать DriverGuard 1.0.0  →", {"color": OK, "bold": True,
+                                         "link": RELEASE})]], size=12)
+text(s, 7.62, 4.62, 4.85, 0.30,
+     "подписан · 37,8 МБ · Android 8.0+ · SHA256 рядом",
+     size=9, color=INK2)
 
 # QR-код, если сгенерирован
 qr = os.path.join(PROJECT, "docs", "qr_repo.png")
 if os.path.exists(qr):
     s.shapes.add_picture(qr, Inches(12.02), Inches(1.62), height=Inches(1.5))
 
-text(s, 7.62, 4.10, 4.85, 0.34, "Гиперссылка на слайде", size=9, color=INK3,
+text(s, 7.62, 5.02, 4.85, 0.24, "Гиперссылки на слайде", size=9, color=INK3,
      bold=True, letter=1.2)
 
 rect(s, 0.75, 6.20, 11.9, 0.012, fill=STROKE)
